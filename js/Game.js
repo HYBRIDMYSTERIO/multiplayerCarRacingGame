@@ -44,6 +44,8 @@ class Game {
     form.hide();
     
     Player.getPlayerInfo();
+    player.getCarAtEnd();
+    
     
     if(allPlayers !== undefined){
       background(rgb(198,135,103));
@@ -93,6 +95,13 @@ class Game {
 
     if(player.distance > 3860){
       gameState = 2;
+      player.rank += 1;
+      //console.log(player.rank);
+      Player.updateCarAtEnd(player.rank);
+
+      
+
+      
     }
    
     drawSprites();
@@ -100,5 +109,9 @@ class Game {
 
   end(){
     console.log("Game Ended");
+    console.log(player.rank);
+
+
+    console.log(player.name);
   }
 }
