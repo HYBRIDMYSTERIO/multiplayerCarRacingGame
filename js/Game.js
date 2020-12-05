@@ -108,10 +108,14 @@ class Game {
   }
 
   end(){
+    
     console.log("Game Ended");
     console.log(player.rank);
 
 
     console.log(player.name);
+
+    form.ranking.html(player.name + " Rank : " + player.rank);
+    form.ranking.show();
   }
 }
